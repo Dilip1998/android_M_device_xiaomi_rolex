@@ -28,3 +28,19 @@ PRODUCT_NAME := full_rolex
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 4A
 PRODUCT_MANUFACTURER := Xiaomi
+
+#apn
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+TARGET_VENDOR_PRODUCT_NAME := rolex
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE="rolex" \
+    PRODUCT_NAME="rolex" \
+    PRIVATE_BUILD_DESC="rolex-user 7.1.2 N2G47H V9.2.6.0.NCCMIEK release-keys"
+
+BUILD_FINGERPRINT := Xiaomi/rolex/rolex:7.1.2/N2G47H/V9.2.6.0.NCCMIEK:user/release-keys
+
